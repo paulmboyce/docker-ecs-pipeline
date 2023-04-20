@@ -3,8 +3,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        buildno: 1
     image: app:v1
     ports:
       - "3000:3000"
