@@ -3,6 +3,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    x-develop:
+      watch:
+        - action: rebuild
+          path: ./index.js
+          target: .
     image: app:v1
     ports:
       - "3000:3000"
